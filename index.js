@@ -30,4 +30,12 @@ function logAction(action, username) {
     return `User ${username} performed ${action} at ${timestamp}`;
 }
 
+logAction(undefined, "Barbie");
+logAction(null, "Barbie");
+logAction("", "Barbie");
+
+logAction("login", undefined);
+logAction("login", null);
+logAction("login", "");
+
 module.exports = { capitalizeWords, filterActiveUsers, logAction };

@@ -1,9 +1,5 @@
 
-const {
-  capitalizeWords,
-  filterActiveUsers,
-  logAction,
-} = require("../index");
+const { capitalizeWords, filterActiveUsers, logAction } = require("../index");
 
 describe("capitalizeWords", () => {
   it("capitalizes the first letters", () => {
@@ -72,6 +68,10 @@ describe("logAction", () => {
   it("returns an error when the username is missing", () => {
     expect(logAction("login", null)).toBe("Invalid input");
   });
+
+// can't understand why logAction("login", null)) and (logAction(null, "Barbie")) doesn't pass the test
+// can't understand why logAction("login", undefined)) and (logAction(undefined, "Barbie")) doesn't pass the test
+// nothing works for this one.
 
 });
 
