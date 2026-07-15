@@ -73,5 +73,9 @@ describe("logAction", () => {
 // can't understand why logAction("login", undefined)) and (logAction(undefined, "Barbie")) doesn't pass the test
 // nothing works for this one.
 
+//update: adding this in index.js  if (!action || !username) {
+//.                                    return "Invalid input";
+//                                 } made it work.
+
 });
 

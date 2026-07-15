@@ -26,16 +26,12 @@ function filterActiveUsers(users) {
  * @returns {string} - The log message.
  */
 function logAction(action, username) {
+    if (!action || !username) {
+    return "Invalid input";
+  }
     const timestamp = new Date().toISOString();
     return `User ${username} performed ${action} at ${timestamp}`;
 }
 
-logAction(undefined, "Barbie");
-logAction(null, "Barbie");
-logAction("", "Barbie");
-
-logAction("login", undefined);
-logAction("login", null);
-logAction("login", "");
 
 module.exports = { capitalizeWords, filterActiveUsers, logAction };
